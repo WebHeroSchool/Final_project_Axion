@@ -1,0 +1,96 @@
+
+@font-face {
+    font-family: 'gotham_proregular';
+    src: url('gothampro-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'gotham_problack';
+    src: url('gothampro-black-webfont.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'gotham_problack_italic';
+    src: url('gothampro-blackitalic-webfont.woff') format('woff');
+    font-weight: 900;
+    font-style: italic;
+
+}
+
+@font-face {
+    font-family: 'gotham_probold';
+    src: url('gothampro-bold-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'gotham_probold_italic';
+    src: url('gothampro-bolditalic-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+
+}
+
+@font-face {
+    font-family: 'gotham_proitalic';
+    src: url('gothampro-italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+
+}
+
+@font-face {
+    font-family: 'gotham_prolight';
+    src: url('gothampro-light-webfont.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'gotham_prolight_italic';
+    src: url('gothampro-lightitalic-webfont.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+
+}
+
+@font-face {
+    font-family: 'gotham_promedium';
+    src: url('gothampro-medium-webfont.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'gotham_promedium_italic';
+    src: url('gothampro-mediumitalic-webfont.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+
+}
+
+@font-face {
+    font-family: 'gotham_pro_narrowbold';
+    src: url('gothampronarrow-bold-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'gotham_pro_narrowmedium';
+    src: url('gothampronarrow-medium-webfont.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+
+}
