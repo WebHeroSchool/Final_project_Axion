@@ -36,14 +36,6 @@ body {
   margin-right: 35px;
 }
 
-.menu__form {
-  padding-left: 157px;
-  padding-right: 37px;
-}
-.menu__cart-number {
-  margin-left: -35px;
-}
-
 .menu__item:last-child {
   margin-right: 16.4%;
 }
