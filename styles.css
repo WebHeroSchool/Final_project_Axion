@@ -1,0 +1,53 @@
+body {
+  margin: 0;
+}
+
+.header, .annotation, .products, .video-clip, .stories, .photos {
+  width: 88%;
+  margin: auto;
+}
+.header {
+  display: flex;
+  border: 1px dashed red;
+}
+
+.logo, .menu, .menu__item, .menu__button, .menu__form, .menu__item2 {
+  display: inline-block;
+  border: 1px dashed green;
+}
+
+.logo {
+  height: 55px;
+  width: 55px;
+  margin-right: 45px;
+  padding-top: 33px ;
+  padding-bottom: 8px;
+  background: no-repeat center url('img/Axion-logo-1.svg');
+  border: 1px dashed blue;
+}
+
+.menu__item, .menu__item2 {
+  position: relative;
+  padding-top: 48px;
+  padding-bottom: 24px;
+  font: normal 12px/12px gotham_probold, arial, helvetica, sans-serif;
+  color: #000;
+  text-decoration: none;
+  margin-right: 35px;
+}
+
+.menu__form {
+  padding-left: 157px;
+  padding-right: 37px;
+}
+.menu__cart-number {
+  margin-left: -35px;
+}
+
+.menu__item:last-child {
+  margin-right: 16.4%;
+}
+
+.menu__item2:last-child {
+  margin-right: 0;
+}
