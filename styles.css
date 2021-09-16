@@ -9,7 +9,9 @@ body {
 .header {
   display: flex;
 }
-
+.menu {
+  border: 1px dashed green;
+}
 .logo, .menu__item, .menu__button, .menu__form, .menu__sign, .menu__cart {
   display: inline-block;
 }
@@ -17,36 +19,34 @@ body {
 .logo {
   height: 55px;
   width: 55px;
-  margin-right: 45px;
-  padding-top: 33px ;
-  padding-bottom: 8px;
+  margin-right: 21px;
+  margin-top: 34px;
   background: no-repeat center url('img/Axion-logo-1.svg');
 }
 
 .menu__item, .menu__sign,.menu__cart {
   position: relative;
-  padding-top: 48px;
+  padding-top: 52px;
   padding-bottom: 24px;
   font: normal 12px/12px gotham_probold, arial, helvetica, sans-serif;
   color: #000;
   text-decoration: none;
-  margin-right: 35px;
+  margin-right: 31px;
 }
 
 .menu__item:nth-child(5) {
-  margin-right: 16.4%;
+  margin-right: 21%;
 }
 .menu__cart {
   margin-right: 0;
 }
 .menu__cart-number {
-  border: 1px solid red;
+  margin-right: 7px;
 }
 .menu__form {
-  margin-right: 21px;
+  margin-right: 32px;
 }
 .menu__language {
-  border: 1px solid black;
 }
 
 .annotation {
@@ -67,4 +67,18 @@ body {
   font: normal 12px/12px gotham_probold, arial, helvetica, sans-serif;
   color: white;
   padding-left: 60px;
+}
+
+input[type=search] {
+    padding:0px;
+    border:0px;
+    background: no-repeat bottom url('img/search_back.svg');
+}
+
+button[type=submit] {
+    padding:0px 0px;
+    background:white;
+    border:0 none;
+    cursor:pointer;
+
 }
