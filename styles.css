@@ -2,18 +2,16 @@ body {
   margin: 0;
 }
 
-.header, .annotation, .products, .video-clip, .stories, .photos {
+.header,  .menu, .annotation, .products, .video-clip, .stories, .photos {
   width: 88%;
   margin: auto;
 }
 .header {
   display: flex;
-  border: 1px dashed red;
 }
 
-.logo, .menu, .menu__item, .menu__button, .menu__form, .menu__item2 {
+.logo, .menu__item, .menu__button, .menu__form, .menu__sign, .menu__cart {
   display: inline-block;
-  border: 1px dashed green;
 }
 
 .logo {
@@ -23,10 +21,9 @@ body {
   padding-top: 33px ;
   padding-bottom: 8px;
   background: no-repeat center url('img/Axion-logo-1.svg');
-  border: 1px dashed blue;
 }
 
-.menu__item, .menu__item2 {
+.menu__item, .menu__sign,.menu__cart {
   position: relative;
   padding-top: 48px;
   padding-bottom: 24px;
@@ -36,10 +33,38 @@ body {
   margin-right: 35px;
 }
 
-.menu__item:last-child {
+.menu__item:nth-child(5) {
   margin-right: 16.4%;
 }
-
-.menu__item2:last-child {
+.menu__cart {
   margin-right: 0;
+}
+.menu__cart-number {
+  border: 1px solid red;
+}
+.menu__form {
+  margin-right: 21px;
+}
+.menu__language {
+  border: 1px solid black;
+}
+
+.annotation {
+  background: url('img/rob-potter-b.jpg');
+  height: 280px;
+  width: 1030px;
+}
+
+.annotation__title {
+  font: normal 30px/29px gotham_probold, arial, helvetica, sans-serif;
+  color: white;
+  padding-top: 91px;
+  padding-left: 60px;
+
+}
+.annotation__link {
+  text-decoration: none;
+  font: normal 12px/12px gotham_probold, arial, helvetica, sans-serif;
+  color: white;
+  padding-left: 60px;
 }
