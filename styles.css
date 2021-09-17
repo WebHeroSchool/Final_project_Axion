@@ -102,3 +102,34 @@ button[type=submit] {
   color: white;
   padding-left: 60px;
 }
+
+@media (min-width:1024px) and (max-width:1170px) {
+  .menu__item, .menu__sign,.menu__cart {
+    margin-right:;
+  }
+  .logo {
+    width:61px;
+    padding-left:2px;
+    margin-right:6px;
+  }
+  .menu__item:nth-child(5) {
+    margin-right: 15%;
+}
+  .menu__form::after {
+    width: 161px;
+    left:14px;
+}
+  .menu__form {
+    margin-right:29px;
+}
+  .menu__sign {
+    margin-right:23px;
+}
+  .header {
+    width:91%;
+  }
+  .annotation {
+    background: url('img/rob-potter-1024.jpg');
+}
+
+  }
