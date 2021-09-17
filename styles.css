@@ -1,11 +1,14 @@
 body {
   margin: 0;
 }
-
-.header,  .menu, .annotation, .products, .video-clip, .stories, .photos {
+.wrapper {
+  width: 88%;
+  margin: 0 auto;
+}
+/*.header,  .menu, .annotation, .products, .video-clip, .stories, .photos {
   width: 88%;
   margin: auto;
-}
+}*/
 .header {
   display: flex;
 }
@@ -36,9 +39,9 @@ body {
 .menu__language {
   margin-top: 2px;
 }
-.menu__item:nth-child(5) {
+/* .menu__item:nth-child(5) {
   margin-right: 21%;
-}
+} */
 .menu__cart {
   margin-right: 4px;
 }
@@ -207,7 +210,7 @@ button[type=submit] {
   }
 }
 
-@media (min-width:320px) and (max-width:768px) {
+@media (min-width:320px) and (max-width:767px) {
   .menu {
     display:none;
   }
