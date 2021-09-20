@@ -12,16 +12,12 @@ body {
 .menu1 {
   margin-right:117px;
 }
-.menu2 {
-  margin-right:;
-}
 .menu__form {
   margin-right: 31px;
 }
 .logo, .menu__item, .menu__button, .menu__form, .menu__sign, .menu__cart, .menu__cart-number {
   display: inline-block;
 }
-
 .logo {
   height: 55px;
   width: 55px;
@@ -29,7 +25,6 @@ body {
   margin-top: 33px;
   background: no-repeat center url('img/Axion-logo-1.svg');
 }
-
 .menu__item, .menu__sign,.menu__cart {
   position: relative;
   padding-top:53px;
@@ -59,7 +54,6 @@ body {
   padding-top: 2px;
   padding-right:2px;
 }
-
 .menu__icon {
   display: none;
 }
@@ -86,15 +80,13 @@ button[type=submit] {
 .menu__button-image {
   margin-bottom:-3px;
 }
-
 .annotation {
   margin:auto;
   background: center url('img/rob-potter-b.jpg');
   height: 280px;
-  width: 1030px;
+  width: 100%;
   border: 1px solid white;
 }
-
 .annotation__title {
   font: normal 30px/29px gotham_probold, arial, helvetica, sans-serif;
   color: white;
@@ -108,8 +100,55 @@ button[type=submit] {
   color: white;
   padding-left: 60px;
 }
+.products__item, .products__line, .products__price {
+  display: inline-block;
+}
+.products__name {
+  display: block;
+}
+.video-clip {
+  background:black;
+  color:white;
+  padding-top: 67px;
+  padding-bottom: 66px;
+  padding-left: 33px;
+}
+.video-clip__image, .video-clip__texting {
+  display:inline-block;
+}
+.stories__item {
+  display:inline-block;
+}
+.footer {
+  background: black;
+  display:flex;
+  justify-content:space-around;
+}
+.footer__kit {
+  display: inline-block;
+  color: white;
+  margin-right:
+}
+.footer__title {
+  font: normal 12px/11px gotham_probold, arial, helvetica, sans-serif;
+}
+.footer__link {
+  display: block;
+  color: white;
+  text-decoration:none;
+  font-family: gotham_prolight, arial, helvetica, sans-serif;
+}
+.footer__link-image {
+  display: inline-block;
+}
+.footer__button {
+  display: block;
+}
+.footer__disclaimer {
+  display: block;
+}
 
-@media (max-width:1100px) {
+@media (min-width:769px) and (max-width:1024px) {
   .wrapper {
    width: 90.8%;
    margin:auto;
@@ -139,7 +178,7 @@ button[type=submit] {
      margin:auto;
      background: url("img/rob-potter-1024.jpg");
      height:253px;
-     width:930px;
+     width:100%;
 }
   .annotation__title {
     padding-top:50px;
@@ -162,128 +201,135 @@ button[type=submit] {
     padding-left: 85px;
   }
 }
+@media (min-width:1025px) and (max-width:1060px) {
+  .menu1 {
+    margin-right:5px;
+  }
+  .menu__item {
+    margin-right:30px;
+  }
+  .menu__form {
+    margin-right: 30px;
+  }
+  .menu__sign {
+    margin-right:30px;
+  }
+}
 
-@media (max-width:1023px) {
-  .menu1,.menu2,.menu__language,.products, .video-clip, .stories, .photos, .footer  {
-    display:none;
+
+@media (min-width:769px) and (max-width:945px) {
+  .menu1 {
+    margin-right:5px;
+  }
+  .menu__item {
+    margin-right:10px;
+  }
+  .menu__form {
+    margin-right: 10px;
+  }
+}
+
+@media (max-width:768px) {
+  .products, .video-clip, .footer, .stories,.photos {
+    display: none;
+  }
+  .menu1, .menu2,.menu__language {
+    display: none;
   }
   .wrapper {
     width:100%;
-    margin:auto;
   }
   .header {
-    display:flex;
-    margin-right:44px;
-    margin-left:28px;
-    justify-content: space-between;
+    width:89%;
+    margin:auto;
     margin-bottom:38px;
-    margin-top:7px;
-  }
-  .annotation {
-    height:415px;
-    width:768px;
   }
   .logo {
-    background: no-repeat url('img/Axion-logo-0.svg');
-    height:34px;
-    width:175px;
-    margin-right:6%;
-    margin-left:15px;
-  }
-  .annotation {
-    background: no-repeat url('img/rob-potter-768.jpg');
-    height:415px;
-    width:768px;
-  }
-  .annotation__title {
-    font: normal 50px/47px gotham_probold, arial, helvetica, sans-serif;
-    padding-top:81px;
-    padding-left:43px;
-    padding-bottom:45px;
-  }
-  .annotation__link {
-    font: normal 20px/19px gotham_probold, arial, helvetica, sans-serif;
-    padding-left:43px;
-  }
-  .annotation__link-image {
-    width:74px;
-    padding-left:3px;
+     background: no-repeat url('img/Axion-logo-0.svg');
+     height:34px;
+     width:156px;
+     margin-top:41px;
   }
   .menu__icon {
-    display:inline-block;
-    position:relative;
-    height:25px;
-    width:61px;
-    background: no-repeat url('img/menu-icon.svg');
-    margin-top:39px;
-  }
+   display:inline-block;
+   position:relative;
+   height:25px;
+   width:61px;
+   background: no-repeat url('img/menu-icon.svg');
+   margin-top:46px;
+ }
+ .annotation {
+   background: no-repeat url('img/rob-potter-768.jpg');
+   height:415px;
+   width:100%;
+ }
+ .annotation__title {
+   font: normal 50px/47px gotham_probold, arial, helvetica, sans-serif;
+   padding-top:80px;
+   padding-left:43px;
+   padding-bottom:36px;
+ }
+ .annotation__link {
+   font: normal 20px/19px gotham_probold, arial, helvetica, sans-serif;
+   padding-left:43px;
+
+ }
+ .annotation__link-image {
+   width:71px;
+   margin-left:6px;
+ }
 }
-@media (max-width:767px) {
-  .menu {
-    display:none;
-  }
-  .menu__language {
-    display:none;
-  }
+
+
+@media (max-width:376px) {
   .header {
-    width:88%;
-    margin-bottom:25px;
-    margin-top:-10px;
-    justify-content:space-between;
-    margin-left:33px;
+    width:74.6%;
+    margin-top:0px;
+    margin-bottom:26px;
   }
   .logo {
-    background: no-repeat url('img/Axion-logo-0.svg');
-    background-size:100%;
+    margin-top:23px;
     height:22px;
     width:104px;
+    background-size:100%;
+  }
+  .menu__icon {
+    height:17px;
+    width:41px;
+    background-size:100%;
+    margin-top:26px;
   }
   .annotation {
     background: no-repeat url('img/rob-potter-375.jpg');
-    width:375px;
+    width:100%;
   }
   .annotation__title {
-    font: normal 20px/19px gotham_probold, arial, helvetica, sans-serif;
+    padding-left:47px;
     padding-top:50px;
-    padding-left:46px;
-    padding-bottom:10px;
+    padding-bottom:1px;
+    font: normal 20px/19px gotham_probold, arial, helvetica, sans-serif;
   }
   .annotation__link {
-    font: normal 12px/12px gotham_probold, arial, helvetica, sans-serif;
+    font: normal 12px/11px gotham_probold, arial, helvetica, sans-serif;
     padding-left:47px;
   }
   .annotation__link-image {
-    padding-left:4px;
-    width:45px;
-  }
-  .menu__icon {
-    display:flex;
-    position:relative;
-    height:16px;
-    width:41px;
-    background: 100% no-repeat url('img/menu-icon.svg');
-    margin-top:38px;
-    margin-right:35px;
+    width: 47px;
+    margin-left:3px;
   }
 }
 
-@media (max-width:375px) {
+@media (max-width:321px) {
   .header {
-    width:100%;
-    border:1px dashed green;
+    width: 87.5%;
   }
-  .wrapper {
-    margin:auto;
-    width:100%;
-  }
-  .logo {
-    margin-left:0px;
-}
   .annotation {
-    background: no-repeat url('img/rob-potter-320.jpg');
+    width:100%;
+    background:no-repeat url('img/rob-potter-320.jpg');
   }
   .annotation__title {
     padding-left:19px;
+    padding-top:50px;
   }
   .annotation__link {
     padding-left:19px;
