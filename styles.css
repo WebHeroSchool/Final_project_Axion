@@ -1,74 +1,88 @@
-body {
+*,*::before,*::after {
+  padding: 0;
   margin: 0;
+  border: 0;
+  box-sizing: border-box;
 }
+a {
+  text-decoration: none;
+}
+ul, ol {
+  list-style: none;
+}
+img {
+  vertical-align: top;
+}
+body {
+  height: 100%;
+  line-height: 1;
+  color: #000;
+}
+/* ----------------------------------------------------------------------------------------------------- */
 .wrapper {
+  min-height: 100%;
   width: 88%;
-  margin:auto;
+  margin: 0 auto;
+  overflow: hidden;
 }
+/* ----------------------------------------------------------------------------------------------------- */
+._container {
+  max-width: 1030px;
+  margin: 0px auto;
+}
+/* ------ШАПКА------------------------------------------------------------------------------------------ */
 .header {
+  /* position: fixed; */
+  width: 100%;
+  left: 0;
+  top:0;
+  margin-top: 10px;
+  margin-bottom: 9px;
+  font: normal 12px/12px gotham_probold, arial, helvetica, sans-serif;
+}
+.header__container {
   display: flex;
-  justify-content:space-between;
-}
-.menu1 {
-  margin-right:117px;
-}
-.menu__form {
-  margin-right: 31px;
-}
-.logo, .menu__item, .menu__button, .menu__form, .menu__sign, .menu__cart, .menu__cart-number, .price2 {
-  display: inline-block;
+  min-height: 96px;
+  align-items: center;
 }
 .logo {
-  height: 55px;
+  display: inline-block;
+  height: 60px;
   width: 55px;
-  margin-right: -2px;
-  margin-top: 33px;
-  background: no-repeat center url('img/Axion-logo-1.svg');
+  background: no-repeat bottom url("img/Axion-logo-1.svg");
 }
-.menu__item, .menu__sign,.menu__cart {
-  position: relative;
-  padding-top:53px;
-  margin-bottom: 49px;
-  font: normal 12px/12px gotham_probold, arial, helvetica, sans-serif;
-  color: #000;
-  text-decoration: none;
+.menu1 {
+  list-style: inherit;
+  margin: 0px 192px 0px 45px;
+
+}
+.menu__item, .menu__form, .menu__sign, .menu__cart, .menu__cart-number, .menu__cart_link {
+  display: inline-block;
+  line-height: 24px;
+  color:black;
+}
+.menu__item:not(:last-child) {
+  margin: 0px 32px 0px 0px;
+}
+.menu2 {
+  margin-top:3px;
+  margin-right:35px;
+}
+.menu__form {
+  display: inline-block;
   margin-right: 31px;
-}
-.menu__language {
-  margin-top: 2px;
-  margin-left:3px;
-}
-.menu__cart {
-  margin-right: 4px;
-}
-.menu__cart-number {
-  position:absolute;
-  height:13px;
-  width:13px;
-  font: 11px/11px gotham_probold, arial, helvetica, sans-serif;
-  color: white;
-  background: black;
-  border-radius: 50%;
-  text-align:center;
-  margin-top: 51px;
-  padding-top: 2px;
-  padding-right:2px;
-}
-.menu__icon {
-  display: none;
 }
 input[type=search] {
     padding:0px;
     border:0px;
 }
-.menu__form::after {
+.menu__form_liner {  /*other name */
   position: relative;
   display: block;
   content: '';
-  margin-top: 4px;
   left: 0;
-  width: 175px;
-  height: 0.9px;
+  width: 176px;
+  height: 1px;
   background: #000;
 }
 button[type=submit] {
@@ -77,523 +91,380 @@ button[type=submit] {
     border:0 none;
     cursor:pointer;
 }
-.menu__button-image {
-  margin-bottom:-3px;
+.menu__sign {
+  margin-right: 31px;
 }
+.menu__cart_link {
+  margin-right:2px;
+}
+.menu__cart-number {
+  height:14px;
+  width:14px;
+  font: 11px/11px gotham_probold, arial, helvetica, sans-serif;
+  color: white;
+  background: black;
+  border-radius: 50%;
+  text-align:center;
+  padding-top: 2px;
+  padding-right:2px;
+}
+.menu__icon {
+  position: relative;
+  display: none;
+}
+/* ------ANNOTATION------------------------------------------------------------------------------------------ */
 .annotation {
-  margin:auto;
-  background: center url('img/rob-potter-b.jpg');
+  background: center url("img/rob-potter-b.jpg");
+  background-size: 100%;
   height: 280px;
-  width: 100%;
-  border: 1px solid white;
-  margin-bottom: 50px;
+  color: white;
+  padding-left: 59px;
+  margin-bottom: 52px;
 }
 .annotation__title {
   font: normal 30px/29px gotham_probold, arial, helvetica, sans-serif;
-  color: white;
-  padding-top: 62px;
-  padding-left: 60px;
+  padding-top: 89px;
   margin-bottom: 14px;
 }
 .annotation__link {
-  text-decoration: none;
-  font: normal 12px/12px gotham_probold, arial, helvetica, sans-serif;
+  font: normal 12px/11px gotham_probold, arial, helvetica, sans-serif;
   color: white;
-  padding-left: 60px;
 }
+.annotation__link-image {
+  padding-top:5px;
+  padding-left:3px;
+}
+/* -------FUTURE--PRODUCT-------------------------------------------------------------------------------------------- */
 .products {
-  margin-bottom:27px;
-  margin-left:1px;
-}
-.products__item1, .products__item2, .products__item3, .products__item4, .products__line, .products__price, .colors {
-  display: inline-block;
-}
-.products__line {
-  width:2px;
-  margin-right:16px;
-}
-.products__item1 {
-  padding-left:7px;
-  height:261px;
-  width:230px;
-  margin-right:6px;
-}
-.products__item2 {
-  height:261px;
-  width:230px;
-  padding-left:5px;
-  margin-right:6px;
-}
-.products__item3 {
-  padding-left:5px;
-  height:261px;
-  width:230px;
-  margin-right:4px;
-}
-.products__item4 {
-  height:261px;
-  padding-left:5px;
-}
-.products__name {
-  display: block;
-  text-decoration: none;
-  color: black;
-  font: normal 12px/11px gotham_proregular, arial, helvetica, sans-serif;
-  padding-left:4px;
-  margin-bottom:-5px;
-}
-.products__price {
-  font: normal 14px/13px gotham_probold, arial, helvetica, sans-serif;
-  padding-left:4px;
-  margin-right:97px;
+  width:100%;
 }
 .products__title {
   font: normal 22px/21px gotham_probold, arial, helvetica, sans-serif;
-  text-align: center;
-  margin:auto;
-  margin-bottom:19px;
+  width: 244px;
+  height: 22px;
+  margin:0 auto;
+  margin-bottom:17px;
 }
-.products__line {
-  height: 100px;
-  padding-bottom:84px;
+.products__item_wline1, .products__item_wline2, .products__item_wline3, .products__item_wline4, .colors, .products__price,.products__line, .products__item, .price2 {
+  display:inline-block;
+}
+.products__item_wline1, .products__item_wline2, .products__item_wline3 {
+  margin-right:12px;
 }
 .products__image {
-  height:173px;
-  width:188px;
-  margin-bottom:25px;
-  padding-left:15px;
+  display:block;
+  padding-left: 23px;
+  padding-right:19px;
+  margin-bottom:29px;
+}
+.products__line {
+  padding-top:42px;
+  margin-left:14px;
+}
+.products__name {
+  display:block;
+  font: normal 12px/11px gotham_proregular, arial, helvetica, sans-serif;
+  color:inherit;
+  padding-left:13px;
+  margin-bottom:6px;
+}
+.products__price {
+  min-height:24px;
+  width:85px;
+  font: normal 14px/13px gotham_probold, arial, helvetica, sans-serif;
+  padding-left:13px;
+  margin-right:76px;
 }
 .products__color {
+  padding-top:5px;
   margin-right:4px;
 }
 
-
-.video-clip {
-  background:black;
-  color:white;
-  padding-top: 67px;
-  padding-bottom: 66px;
-  padding-left: 33px;
-}
-.video-clip__image, .video-clip__texting {
-  display:inline-block;
-}
-.stories__item {
-  display:inline-block;
-}
-.footer {
-  background: black;
-  display:flex;
-  justify-content:space-around;
-}
-.footer__kit {
-  display: inline-block;
-  color: white;
-  margin-right:
-}
-.footer__title {
-  font: normal 12px/11px gotham_probold, arial, helvetica, sans-serif;
-}
-.footer__link {
-  display: block;
-  color: white;
-  text-decoration:none;
-  font-family: gotham_prolight, arial, helvetica, sans-serif;
-}
-.footer__link-image {
-  display: inline-block;
-}
-.footer__button {
-  display: block;
-}
-.footer__disclaimer {
-  display: block;
-}
-
-@media (min-width:769px) and (max-width:1024px) {
+/* ----------------------------------------------------------------------------------------------------- */
+@media (max-width:1170px) {
   .wrapper {
-   width: 90.8%;
-   margin:auto;
+    width: 90.82%;
+  }
+  ._container {
+    max-width: 930px;
   }
   .header {
-    margin-bottom:15px;
+    margin-bottom: 23px;
   }
   .logo {
-    width:61px;
-    padding-left:2px;
-    margin-right:-10px;
-  }
-  .menu__icon {
-    margin-right:35px;
+    height: 63px;
+    width: 61px;
+    background-size:100%;
   }
   .menu1 {
-    margin-right:62px;
+    margin: 0px 124px 0px 29px;
   }
-  .menu__form::after {
-    width: 161px;
-    left:14px;
-}
-  .menu__form {
-    margin-right:27px;
-}
-.menu__sign {
-   margin-right:22px;
-}
-  .annotation {
-     margin:auto;
-     background: url("img/rob-potter-1024.jpg");
-     height:253px;
-     width:100%;
-     margin-bottom: 63px;
-}
-  .annotation__title {
-    padding-top:50px;
-    padding-left:5.5%;
-    margin-bottom: 7px;
-}
-  .annotation__link {
-    padding-left:53px;
-}
-  .annotation__link-image {
-    padding-left:10px;
-}
-
-.products__title {
-  margin-bottom:24px;
-}
-.products__line {
-margin-right:12px;
-}
-.products__item1 {
-padding-left:7px;
-width:208px;
-margin-right:6px;
-margin-left:-3px;
-}
-.products__item2 {
-width:208px;
-padding-left:5px;
-margin-right:6px;
-}
-.products__item3 {
-padding-left:5px;
-width:208px;
-margin-right:4px;
-}
-.products__item4 {
-padding-left:0px;
-margin-left:7px;
-}
-.products__name {
-padding-left:4px;
-margin-bottom:-5px;
-}
-.products__price {
-margin-right:83px;
-}
-.products__line {
-padding-bottom:84px;
-}
-.products__image {
-height:163px;
-width:169px;
-margin-bottom:30px;
-
-}
-.products__color {
-margin-right:3px;
-}
-}
-
+  .menu__item:not(:last-child) {
+    margin: 0px 32px 0px 0px;
   }
-
-  @media (min-width:1101px) and (max-width:1170px) {
-  .annotation__title {
-    padding-left:85px;
-  }
-  .annotation__link {
-    padding-left: 85px;
-  }
-}
-@media (min-width:1025px) and (max-width:1160px) {
-  .menu1 {
-    margin-right:5px;
-  }
-  .menu__item {
-    margin-right:30px;
+  .menu2 {
+    margin-top:3px;
+    margin-right:24px;
   }
   .menu__form {
-    margin-right: 30px;
+    margin-right: 29px;
+  }
+  .menu__form_liner {
+    margin-left:16px;
+    width: 160px;
   }
   .menu__sign {
-    margin-right:30px;
+    margin-right: 22px;
   }
-  .products__line {
-  margin-right:8px;
-}
-.products__item1, .products__item2, .products__item3, .products__item4 {
-  margin-right:-20px;
-}
-}
-
-
-@media (min-width:769px) and (max-width:945px) {
-  .menu1 {
-    margin-right:5px;
-  }
-  .menu__item {
-    margin-right:10px;
-  }
-  .menu__form {
-    margin-right: 10px;
-  }
-}
-@media (max-width:1018px) {
-    .products__item1, .products__item2, .products__item3, .products__item4 {
-    margin-right:-20px;
-  }
-}
-@media (max-width:913px) {
-    .products__item1, .products__item2, .products__item3, .products__item4 {
-    margin-right:0px;
-  }
-  .products__line {
-    margin-right:-20px;
-  }
-}
-@media (max-width:895px) {
-  .products__item4 {
-    display:none;
-  }
-  .products__item1 {
-    margin-left:20px;
-  }
-}
-
-
-@media (max-width:768px) {
-  .video-clip, .footer, .stories,.photos {
-    display: none;
-  }
-  .menu1, .menu2,.menu__language, .products__line, .products__item3 {
-    display: none;
-  }
-  .wrapper {
-    width:100%;
-  }
-  .header {
-    width:89%;
-    margin:auto;
-    margin-bottom:38px;
-  }
-  .logo {
-     background: no-repeat url('img/Axion-logo-0.svg');
-     height:34px;
-     width:156px;
-     margin-top:41px;
-  }
-  .menu__icon {
-   display:inline-block;
-   position:relative;
-   height:25px;
-   width:61px;
-   background: no-repeat url('img/menu-icon.svg');
-   margin-top:46px;
- }
- .annotation {
-   background: no-repeat url('img/rob-potter-768.jpg');
-   height:415px;
-   width:100%;
-   margin-bottom:63px;
- }
- .annotation__title {
-   font: normal 50px/47px gotham_probold, arial, helvetica, sans-serif;
-   padding-top:80px;
-   padding-left:43px;
-   padding-bottom:36px;
- }
- .annotation__link {
-   font: normal 20px/19px gotham_probold, arial, helvetica, sans-serif;
-   padding-left:43px;
-
- }
- .annotation__link-image {
-   width:71px;
-   margin-left:6px;
- }
- .products__title {
-   font:normal 30px/29px gotham_probold, arial, helvetica, sans-serif;
-   padding-right:18px;
-   margin-bottom:31px;
- }
- .products__name {
-   font:normal 20px/19px gotham_proregular, arial, helvetica, sans-serif;
- }
- .products__price {
-   font:normal 25px/24px gotham_probold, arial, helvetica, sans-serif;
-   margin-right:60px;
- }
- .products__color {
-   width:21px;
-   margin-right:0px;
- }
- .products__item1 {
-   height:352px;
-   width:281px;
-   margin-right:55px;
-   margin-left:74px;
- }
- .products__item2 {
-   height:352px;
-   width:281px;
- }
- .price2 {
-   margin-right:17px;
- }
- .products__image {
-   height:220px;
-   width:233px;
- }
-}
-
-@media (max-width:708px) {
-  .products {
-    align-items:center;
-  }
-  .products__item2 {
-    display:none;
-  }
-  .products__item1 {
-    padding-left:22%;
-    margin-right:0px;
-  }
-}
-@media (max-width:630px) {
-  .products__item1 {
-    padding-left:19%;
-  }
-}
-@media (max-width:550px) {
-  .products__item1 {
-    padding-left:15%;
-  }
-}
-@media (max-width:500px) {
-  .products__item1 {
-    padding-left:10%;
-  }
-}
-@media (max-width:440px) {
-  .products__item1 {
-    padding-left:3%;
-  }
-}
-
-@media (max-width:376px) {
-  .header {
-    width:74.6%;
-    margin-top:0px;
-    margin-bottom:26px;
-  }
-  .logo {
-    margin-top:23px;
-    height:22px;
-    width:104px;
-    background-size:100%;
-  }
-  .menu__icon {
-    height:17px;
-    width:41px;
-    background-size:100%;
-    margin-top:26px;
+  .menu__cart_link {
+    margin-right:2px;
   }
   .annotation {
-    background: no-repeat url('img/rob-potter-375.jpg');
-    width:100%;
-    height:191px;
+    height: 253px;
+    padding-left:54px;
+    margin-bottom:65px;
+  }
+  .annotation__title {
+    padding-top:75px;
+    margin-bottom:7px;
+  }
+  .annotation__link-image {
+    padding-top:6.5px;
+    padding-left:7px;
+    width:55px;
+  }
+  .prod {
+    width:102%;
+  }
+ .products__item_wline1, .products__item_wline2, .products__item_wline3 {
+   margin-right:10px;
+ }
+  .products__title {
+    margin-bottom: 26px;
+  }
+  .products__image {
+    width:211px;
+    height:159px;
+    padding-left: 20px;
+    padding-right:19px;
+    margin-bottom:35px;
+  }
+  .products__line {
+    padding-top:32px;
+    margin-left:9px;
+  }
+  .products__name {
+    padding-left:13px;
+    margin-bottom:6px;
+  }
+  .products__price {
+    min-height:24px;
+    width:85px;
+    padding-left:12px;
+    margin-right:60px;
+  }
+  .products__color {
+    padding-top:5.5px;
+    margin-right:2px;
+  }
+}
+/* ----------------------------------------------------------------------------------------------------- */
+@media (max-width:1023px) {
+  .wrapper {
+    width: 100%;
+  }
+  .header__container {
+    display:flex;
+    justify-content:space-between;
+  }
+  .header {
+    width:88.8%;
+    margin:0 auto;
+    margin-top:10px;
+    margin-bottom:8px;
+  }
+  .menu1, .menu2, .menu__language {
+    display: none;
+  }
+  .logo {
+    height: 34px;
+    width: 156px;
+    background: no-repeat center url("img/Axion-logo-0.svg");
+    margin-right: 463px;
+  }
+  .menu__icon {
+    display: inline-block;
+    height: 28px;
+    width: 61px;
+    background: no-repeat bottom url("img/menu-icon.svg");
+  }
+  .annotation {
+    height: 415px;
+    margin:0 auto;
+    padding-left:45px;
+    background: center url("img/rob-potter-768.jpg");
+    background-size:100%;
+    margin-bottom: 64px;
+  }
+  .annotation__title {
+    font: normal 50px/48px gotham_probold, arial, helvetica, sans-serif;
+    padding-top:119px;
+    margin-bottom:49px;
+  }
+  .annotation__link {
+    font: normal 20px/19px gotham_probold, arial, helvetica, sans-serif;
+  }
+  .annotation__link-image {
+    width:77px;
+    padding-left:2px;
+    padding-top:3px;
+  }
+
+  .products {
+  width: 81.7%;
+  max-width:638px;
+  }
+  .products__line, .products__item_wline3, .products__item_wline4 {
+    display: none;
+  }
+  .products__title {
+    font: normal 30px/28px gotham_probold, arial, helvetica, sans-serif;
+    width: 348px;
+    margin-bottom:41px;
+  }
+  .products__item_wline1 {
+    margin-right:64px;
+  }
+  .products__image {
+    width:279px;
+    height:215px;
+    padding-left:27px;
+    margin-bottom:31px;
+  }
+  .products__name {
+    font: normal 20px/19px gotham_proregular, arial, helvetica, sans-serif;
+    padding-left:14px;
+    margin-bottom:17px;
+  }
+  .products__price {
+    font: normal 25px/24px gotham_probold, arial, helvetica, sans-serif;
+    padding-left:14px;
+    margin-right:82px;
+  }
+  .price2 {
+    margin-right:14px;
+  }
+  .products__color {
+    width:20px;
+    height:22px;
+    padding-top:0px;
+    margin-right:1px;
+    vertical-align: initial;
+  }
+  .colors {
+    padding-bottom:0px;
+  }
+  }
+/* ----------------------------------------------------------------------------------------------------- */
+@media (max-width:767px) {
+/*   .wrapper {
+    width: 74.7%;
+  } */
+  .header {
+    width:74.7%;
+    margin-top:0px;
+    margin-bottom:1px;
+  }
+  .header__container {
+    min-height:71px;
+  }
+  .logo {
+    height: 22px;
+    width: 105px;
+    margin-right: 134px;
+    background-size:100%;
+  }
+  .menu__icon {
+    background-size:100%;
+    height: 16px;
+    width: 41px;
+    margin-top:1px;
+  }
+    .annotation {
+    height: 191px;
+    margin:0 auto;
+    padding-left:48px;
+    background: center url("img/rob-potter-375.jpg");
+    background-size:100%;
     margin-bottom:37px;
   }
   .annotation__title {
-    padding-left:47px;
-    padding-top:49px;
-    padding-bottom:0px;
-    font: normal 20px/19px gotham_probold, arial, helvetica, sans-serif;
-    margin-bottom:14px;
+    font: normal 20px/20px gotham_probold, arial, helvetica, sans-serif;
+    padding-top:64px;
+    margin-bottom:13px;
   }
   .annotation__link {
     font: normal 12px/11px gotham_probold, arial, helvetica, sans-serif;
-    padding-left:47px;
   }
   .annotation__link-image {
-    width: 47px;
-    margin-left:3px;
-    padding-top:8px;
+    width:51px;
+    padding-left:3px;
+    padding-top:7px;
   }
-  .products__item1 {
-    height:248px;
-    width:281px;
+  .products {
+    width: 75.46%;
+    max-width:284px;
+  }
+  .products__item {
+    width:284px;
+  }
+  .products__item_wline2 {
+    display: none;
   }
   .products__title {
     font: normal 20px/19px gotham_probold, arial, helvetica, sans-serif;
-    padding-left:5px;
+    width: 231px;
     margin-bottom:0px;
   }
   .products__image {
-    width:165px;
-    height:155px;
-    padding-left:21px;
-    margin-bottom:21px;
+    width:247px;
+    height:151px;
+    padding-left:63px;
+    margin-bottom:27px;
   }
   .products__name {
     font: normal 15px/14px gotham_proregular, arial, helvetica, sans-serif;
-    margin-left:-27px;
+    padding-left:17px;
     margin-bottom:7px;
   }
   .products__price {
     font: normal 20px/19px gotham_probold, arial, helvetica, sans-serif;
-    margin-top:0px;
-    padding-left:0px;
-    margin-left:-24px;
-    margin-right:115px;
+    padding-left:17px;
+    margin-right:119px;
   }
   .products__color {
     width:15px;
-    margin-right:1px;
-    padding-top:1px;
+  }
+  .colors {
+    vertical-align:bottom;
+    padding-top:px;
   }
 }
-
-@media (max-width:321px) {
-  .header {
-    width: 87.5%;
+/* ----------------------------------------------------------------------------------------------------- */
+@media (max-width:374px) {
+  /*   .wrapper {
+      width: 87.5%;
+    } */
+    .header {
+      width:87.5%;
+    }
+    .annotation {
+      padding-left:20px;
+      background: url("img/rob-potter-320.jpg");
+      background-size:100%;
+    }
+    .products {
+      width: 89%;
+      max-width:293px;
+    }
   }
-  .annotation {
-    width:100%;
-    background:no-repeat url('img/rob-potter-320.jpg');
-  }
-  .annotation__title {
-    padding-left:19px;
-    padding-top:50px;
-  }
-  .annotation__link {
-    padding-left:19px;
-  }
-  .products__item1 {
-    margin-left:47px;
-    width:auto;
-  }
-}
-@media (max-width:310px) {
-  .products__price {
-    margin-right:65px;
-  }
-}
-@media (min-width:1200px) {
-  .prod {
-    display:flex;
-    justify-content:center;
-  }
-  .products__line {
-    padding-top:45px;
-  }
-}
